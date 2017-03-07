@@ -30,12 +30,12 @@ export default {
     }, {call, put}) {
       yield put({type: 'showLoginButtonLoading'})
       const data = yield call(login, parse(payload))
-      if (data.success) {
+      if (data.status) {  //change data.success to data.status
         yield put({
           type: 'loginSuccess',
           payload: {
             user: {
-              name: payload.username
+              name: payload.email //change username to email
             }
           }})
       } else {
