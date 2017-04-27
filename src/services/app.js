@@ -1,12 +1,23 @@
 import { request } from '../utils'
 import { config } from '../utils'
 export async function login (params) {
+  console.log(params)
   return request(config.host+config.login, {
     method: 'post',
     mode: 'cors',
-    data: params
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(params)
   })
 }
+/*
+fetch('http://sign.dev:3000/user/login',{method:'post',body:JSON.stringify({username:'1234'}),headers: {
+    "Content-Type": "application/json"
+  }})
+  */
+
+
 
 export async function logout (params) {
   return request(config.host+config.logout, {
