@@ -41,7 +41,6 @@ function checkStatus(response) {
  * @return {object}           An object containing either "data" or "err"
  */
 export default async function request(url, options) {
-  console.log(options)
   const response = await fetch(url, options);
 
   checkStatus(response);
@@ -57,6 +56,6 @@ export default async function request(url, options) {
     ret.headers['x-total-count'] = response.headers.get('x-total-count');
   }
 
-  return ret;
-  //return data
+  //return ret;
+  return data
 }

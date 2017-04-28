@@ -1,7 +1,11 @@
 import { request } from '../utils'
 import { config } from '../utils'
 export async function login (params) {
-  console.log(params)
+  //web 端适配
+  if (!params.email){
+    params.email=params.username
+  }
+  params.deviceId='web';
   return request(config.host+config.login, {
     method: 'post',
     mode: 'cors',

@@ -35,7 +35,7 @@ export default {
           type: 'loginSuccess',
           payload: {
             user: {
-              name: payload.email //change username to email
+              name: payload.username //payload指填表的数据
             }
           }})
       } else {
