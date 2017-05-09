@@ -39,8 +39,7 @@ function list ({ loading, dataSource, pagination, onPageChange, onDeleteItem, on
     }, {
       title: '生日',
       dataIndex: '出生年月',
-      key: '出生年月',
-      render: (text) => <span>{text}岁</span>
+      key: '出生年月'
     }, {
       title: '性别',
       dataIndex: 'isMale',
@@ -51,19 +50,25 @@ function list ({ loading, dataSource, pagination, onPageChange, onDeleteItem, on
     }, {
       title: '电话号码',
       dataIndex: '联系电话',
-      key: '联系电话'
+      key: '联系电话',
+      render: (text) => <span>{text
+            ? text
+            : '暂无'}</span>
     }, {
       title: '手机号',
       dataIndex: '手机号',
-      key: '手机号'
+      key: '手机号',
+      render: (text) => <span>{text
+            ? text
+            : '暂无'}</span>
     }, {
       title: '家庭地址',
       dataIndex: '家庭地址',
       key: '家庭地址'
     }, {
-      title: '创建时间',
-      dataIndex: 'createTime',
-      key: 'createTime'
+      title: '入党日期',
+      dataIndex: '入党日期',
+      key: '入党日期'
     }, {
       title: '操作',
       key: 'operation',
