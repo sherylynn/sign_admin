@@ -7,7 +7,7 @@ export default {
     login: false,
     loading: false,
     user: {
-      name: '吴彦祖'
+      name: 'admin'
     },
     loginButtonLoading: false,
     menuPopoverVisible: false,

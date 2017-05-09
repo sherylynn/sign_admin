@@ -9,6 +9,7 @@ module.exports = {
   //host:'http://192.168.0.249:3000',
   login:'/user/login',
   logout:'/user/logout',
+  users:'/api/users',
   userInfo:'/userInfo',
   dashboard:'/dashboard'
 }

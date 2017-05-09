@@ -30,16 +30,16 @@ function list ({ loading, dataSource, pagination, onPageChange, onDeleteItem, on
       render: (text) => <img width={24} src={text} />
     }, {
       title: '姓名',
-      dataIndex: 'name',
-      key: 'name'
+      dataIndex: '姓名',
+      key: '姓名'
     }, {
-      title: '昵称',
-      dataIndex: 'nickName',
-      key: 'nickName'
+      title: '学历',
+      dataIndex: '学历',
+      key: '学历'
     }, {
-      title: '年龄',
-      dataIndex: 'age',
-      key: 'age',
+      title: '生日',
+      dataIndex: '出生年月',
+      key: '出生年月',
       render: (text) => <span>{text}岁</span>
     }, {
       title: '性别',
@@ -49,17 +49,17 @@ function list ({ loading, dataSource, pagination, onPageChange, onDeleteItem, on
             ? '男'
             : '女'}</span>
     }, {
-      title: '电话',
-      dataIndex: 'phone',
-      key: 'phone'
+      title: '电话号码',
+      dataIndex: '联系电话',
+      key: '联系电话'
     }, {
-      title: '邮箱',
-      dataIndex: 'email',
-      key: 'email'
+      title: '手机号',
+      dataIndex: '手机号',
+      key: '手机号'
     }, {
-      title: '住址',
-      dataIndex: 'address',
-      key: 'address'
+      title: '家庭地址',
+      dataIndex: '家庭地址',
+      key: '家庭地址'
     }, {
       title: '创建时间',
       dataIndex: 'createTime',
