@@ -78,7 +78,7 @@ const modal = ({
                 message: '密码未填写'
               }
             ]
-          })(<InputNumber min={18} max={100} />)}
+          })(<Input />)}
         </FormItem>
         <FormItem label='性别' hasFeedback {...formItemLayout}>
           {getFieldDecorator('性别', {
@@ -136,7 +136,6 @@ const modal = ({
             rules: [
               {
                 required: true,
-                type: 'number',
                 message: '不能为空'
               }
             ]
@@ -159,7 +158,6 @@ const modal = ({
             rules: [
               {
                 required: true,
-                type: 'number',
                 message: '不能为空'
               }
             ]
