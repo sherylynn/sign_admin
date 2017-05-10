@@ -43,10 +43,10 @@ function Users ({ location, dispatch, users }) {
         }
       }))
     },
-    onDeleteItem (id) {
+    onDeleteItem (email) {
       dispatch({
         type: 'users/delete',
-        payload: id
+        payload: email
       })
     },
     onEditItem (item) {

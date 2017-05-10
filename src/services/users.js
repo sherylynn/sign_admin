@@ -30,6 +30,7 @@ export async function create (params) {
 }
 
 export async function remove (params) {
+  console.log(params);
   return request(config.host+config.users, {
     method: 'delete',
     mode: 'cors',

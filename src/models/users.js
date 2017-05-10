@@ -51,7 +51,7 @@ export default {
     },
     *'delete' ({ payload }, { call, put }) {
       yield put({ type: 'showLoading' })
-      const data = yield call(remove, { id: payload })
+      const data = yield call(remove, { email: payload })
       if (data && data.success) {
         yield put({
           type: 'querySuccess',
@@ -85,8 +85,8 @@ export default {
     *update ({ payload }, { select, call, put }) {
       yield put({ type: 'hideModal' })
       yield put({ type: 'showLoading' })
-      const id = yield select(({ users }) => users.currentItem.id)
-      const newUser = { ...payload, id }
+      const email = yield select(({ users }) => users.currentItem.email)
+      const newUser = { ...payload, email }
       const data = yield call(update, newUser)
       if (data && data.success) {
         yield put({

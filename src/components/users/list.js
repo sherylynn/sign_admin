@@ -14,7 +14,7 @@ function list ({ loading, dataSource, pagination, onPageChange, onDeleteItem, on
       confirm({
         title: '您确定要删除这条记录吗?',
         onOk () {
-          onDeleteItem(record.id)
+          onDeleteItem(record.email)
         }
       })
     }
@@ -106,7 +106,7 @@ function list ({ loading, dataSource, pagination, onPageChange, onDeleteItem, on
         onChange={onPageChange}
         pagination={pagination}
         simple
-        rowKey={record => record.id}
+        rowKey={record => record.email}
         getBodyWrapper={getBodyWrapper}
       />
     </div>
