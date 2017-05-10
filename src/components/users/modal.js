@@ -48,8 +48,8 @@ const modal = ({
     <Modal {...modalOpts}>
       <Form horizontal>
         <FormItem label='姓名：' hasFeedback {...formItemLayout}>
-          {getFieldDecorator('name', {
-            initialValue: item.name,
+          {getFieldDecorator('username', {
+            initialValue: item.username,
             rules: [
               {
                 required: true,
@@ -58,20 +58,31 @@ const modal = ({
             ]
           })(<Input />)}
         </FormItem>
-        <FormItem label='昵称：' hasFeedback {...formItemLayout}>
-          {getFieldDecorator('nickName', {
-            initialValue: item.nickName,
+        <FormItem label='身份证号：' hasFeedback {...formItemLayout}>
+          {getFieldDecorator('email', {
+            initialValue: item.email,
             rules: [
               {
                 required: true,
-                message: '昵称未填写'
+                message: '身份证号未填写'
               }
             ]
           })(<Input />)}
         </FormItem>
+        <FormItem label='密码：' hasFeedback {...formItemLayout}>
+          {getFieldDecorator('password', {
+            initialValue: item.password,
+            rules: [
+              {
+                required: true,
+                message: '密码未填写'
+              }
+            ]
+          })(<InputNumber min={18} max={100} />)}
+        </FormItem>
         <FormItem label='性别' hasFeedback {...formItemLayout}>
-          {getFieldDecorator('isMale', {
-            initialValue: item.isMale,
+          {getFieldDecorator('性别', {
+            initialValue: item['性别'],
             rules: [
               {
                 required: true,
@@ -86,21 +97,54 @@ const modal = ({
             </Radio.Group>
           )}
         </FormItem>
-        <FormItem label='年龄：' hasFeedback {...formItemLayout}>
-          {getFieldDecorator('age', {
-            initialValue: item.age,
+        <FormItem label='出生年月：' hasFeedback {...formItemLayout}>
+          {getFieldDecorator('出生年月', {
+            initialValue: item['出生年月'],
+            rules: [
+              {
+                required: true,
+                message: '出生年月未填写'
+              }
+            ]
+          })(<Input />)}
+        </FormItem>
+        <FormItem label='学历：' hasFeedback {...formItemLayout}>
+          {getFieldDecorator('学历', {
+            initialValue: item['学历'],
+            rules: [
+              {
+                required: true,
+                message: '学历未填写'
+              }
+            ]
+          })(<Input />)}
+        </FormItem>
+        <FormItem label='入党日期：' hasFeedback {...formItemLayout}>
+          {getFieldDecorator('入党日期', {
+            initialValue: item['入党日期'],
+            rules: [
+              {
+                required: true,
+                message: '入党日期未填写'
+              }
+            ]
+          })(<Input />)}
+        </FormItem>
+        <FormItem label='电话：' hasFeedback {...formItemLayout}>
+          {getFieldDecorator('联系电话', {
+            initialValue: item['联系电话'],
             rules: [
               {
                 required: true,
                 type: 'number',
-                message: '年龄未填写'
+                message: '不能为空'
               }
             ]
-          })(<InputNumber min={18} max={100} />)}
+          })(<Input />)}
         </FormItem>
-        <FormItem label='电话：' hasFeedback {...formItemLayout}>
-          {getFieldDecorator('phone', {
-            initialValue: item.phone,
+        <FormItem label='地址：' hasFeedback {...formItemLayout}>
+          {getFieldDecorator('家庭地址', {
+            initialValue: item['家庭地址'],
             rules: [
               {
                 required: true,
@@ -109,9 +153,21 @@ const modal = ({
             ]
           })(<Input />)}
         </FormItem>
-        <FormItem label='邮箱：' hasFeedback {...formItemLayout}>
-          {getFieldDecorator('email', {
-            initialValue: item.email,
+        <FormItem label='手机：' hasFeedback {...formItemLayout}>
+          {getFieldDecorator('手机号', {
+            initialValue: item['手机号'],
+            rules: [
+              {
+                required: true,
+                type: 'number',
+                message: '不能为空'
+              }
+            ]
+          })(<Input />)}
+        </FormItem>
+        <FormItem label='组别：' hasFeedback {...formItemLayout}>
+          {getFieldDecorator('组别', {
+            initialValue: item['组别'],
             rules: [
               {
                 required: true,
@@ -120,17 +176,7 @@ const modal = ({
             ]
           })(<Input />)}
         </FormItem>
-        <FormItem label='住址：' hasFeedback {...formItemLayout}>
-          {getFieldDecorator('address', {
-            initialValue: item.address,
-            rules: [
-              {
-                required: true,
-                message: '不能为空'
-              }
-            ]
-          })(<Input />)}
-        </FormItem>
+        
       </Form>
     </Modal>
   )
