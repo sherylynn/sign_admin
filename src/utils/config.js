@@ -5,7 +5,7 @@ module.exports = {
   logoSrc: 'https://t.alipayobjects.com/images/rmsweb/T1B9hfXcdvXXXXXXXX.svg',
   logoText: '后台',
   needLogin: true,
-  host:'http://sign.dev:3000',
+  host:'http://a3.18e.pub:3000',
   //host:'http://192.168.0.249:3000',
   login:'/user/login',
   logout:'/user/logout',
