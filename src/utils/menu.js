@@ -10,6 +10,11 @@ module.exports = [
     icon: 'user'
   },
   {
+    key: 'actis',
+    name: '活动管理',
+    icon: 'message'
+  },
+  {
     key: 'ui',
     name: 'UI组件',
     icon: 'camera-o',

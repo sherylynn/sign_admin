@@ -11,7 +11,7 @@ import { classnames } from '../utils'
 import '../components/layout/common.less'
 
 function App ({children, location, dispatch, app}) {
-  const {login, loading, loginButtonLoading, user, siderFold, darkTheme, isNavbar, menuPopoverVisible, navOpenKeys} = app
+  const {login, loading, loginButtonLoading, user, acti, siderFold, darkTheme, isNavbar, menuPopoverVisible, navOpenKeys} = app
   const loginProps = {
     loading,
     loginButtonLoading,
@@ -22,6 +22,7 @@ function App ({children, location, dispatch, app}) {
 
   const headerProps = {
     user,
+    acti,
     siderFold,
     location,
     isNavbar,

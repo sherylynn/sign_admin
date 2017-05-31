@@ -11,6 +11,7 @@ module.exports = {
   login:'/user/login',
   logout:'/user/logout',
   users:'/api/users',
+  actis:'/api/actis',
   userInfo:'/userInfo',
   dashboard:'/dashboard'
 }
