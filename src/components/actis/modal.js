@@ -37,7 +37,7 @@ const modal = ({
   }
 
   const modalOpts = {
-    title: `${type === 'create' ? '新建用户' : '修改用户'}`,
+    title: `${type === 'create' ? '新建活动' : '修改活动'}`,
     visible,
     onOk: handleOk,
     onCancel,
@@ -47,134 +47,87 @@ const modal = ({
   return (
     <Modal {...modalOpts}>
       <Form horizontal>
-        <FormItem label='姓名：' hasFeedback {...formItemLayout}>
-          {getFieldDecorator('username', {
-            initialValue: item.username,
-            rules: [
-              {
-                required: true,
-                message: '姓名未填写'
-              }
-            ]
-          })(<Input />)}
-        </FormItem>
-        <FormItem label='身份证号：' hasFeedback {...formItemLayout}>
-          {getFieldDecorator('email', {
-            initialValue: item.email,
-            rules: [
-              {
-                required: true,
-                message: '身份证号未填写'
-              }
-            ]
-          })(<Input />)}
-        </FormItem>
-        <FormItem label='密码：' hasFeedback {...formItemLayout}>
-          {getFieldDecorator('password', {
-            initialValue: item.password
-            ? item.password
+        <FormItem label='唯一标识号：' hasFeedback {...formItemLayout}>
+          {getFieldDecorator('_id', {
+            initialValue: item._id
+            ? item._id
             : '******',
             rules: [
               {
                 required: true,
-                message: '密码未填写'
+                message: '唯一标识号未填写'
               }
             ]
           })(<Input />)}
         </FormItem>
-        <FormItem label='性别' hasFeedback {...formItemLayout}>
-          {getFieldDecorator('性别', {
-            initialValue: item['性别'],
+        <FormItem label='名称：' hasFeedback {...formItemLayout}>
+          {getFieldDecorator('名称', {
+            initialValue: item['名称'],
             rules: [
               {
                 required: true,
-                message: '性别未填写'
+                message: '名称未填写'
               }
             ]
           })(<Input />)}
         </FormItem>
-        <FormItem label='出生年月：' hasFeedback {...formItemLayout}>
-          {getFieldDecorator('出生年月', {
-            initialValue: item['出生年月'],
+        <FormItem label='时间：' hasFeedback {...formItemLayout}>
+          {getFieldDecorator('时间', {
+            initialValue: item['时间'],
             rules: [
               {
                 required: true,
-                message: '出生年月未填写'
+                message: '时间未填写'
               }
             ]
           })(<Input />)}
         </FormItem>
-        <FormItem label='学历：' hasFeedback {...formItemLayout}>
-          {getFieldDecorator('学历', {
-            initialValue: item['学历'],
+        <FormItem label='地点' hasFeedback {...formItemLayout}>
+          {getFieldDecorator('地点', {
+            initialValue: item['地点'],
             rules: [
               {
                 required: true,
-                message: '学历未填写'
+                message: '地点未填写'
               }
             ]
           })(<Input />)}
         </FormItem>
-        <FormItem label='入党日期：' hasFeedback {...formItemLayout}>
-          {getFieldDecorator('入党日期', {
-            initialValue: item['入党日期'],
+        <FormItem label='积分：' hasFeedback {...formItemLayout}>
+          {getFieldDecorator('积分', {
+            initialValue: item['积分'],
             rules: [
               {
                 required: true,
-                message: '入党日期未填写'
-              }
-            ]
-          })(<Input />)}
-        </FormItem>
-        <FormItem label='电话：' hasFeedback {...formItemLayout}>
-          {getFieldDecorator('联系电话', {
-            initialValue: item['联系电话']
-            ? item['联系电话']
-            : '暂无',
-            rules: [
-              {
-                required: true,
-                message: '不能为空'
-              }
-            ]
-          })(<Input />)}
-        </FormItem>
-        <FormItem label='地址：' hasFeedback {...formItemLayout}>
-          {getFieldDecorator('家庭地址', {
-            initialValue: item['家庭地址'],
-            rules: [
-              {
-                required: true,
-                message: '不能为空'
-              }
-            ]
-          })(<Input />)}
-        </FormItem>
-        <FormItem label='手机：' hasFeedback {...formItemLayout}>
-          {getFieldDecorator('手机号', {
-            initialValue: item['手机号']
-            ? item['手机号']
-            : '暂无',
-            rules: [
-              {
-                required: true,
-                message: '不能为空'
-              }
-            ]
-          })(<Input />)}
-        </FormItem>
-        <FormItem label='组别：' hasFeedback {...formItemLayout}>
-          {getFieldDecorator('组别', {
-            initialValue: item['组别'],
-            rules: [
-              {
-                required: true,
-                message: '不能为空'
+                message: '积分未填写'
               }
             ]
           })(<Input />)}
         </FormItem>
         
+        
+        <FormItem label='内容：' hasFeedback {...formItemLayout}>
+          {getFieldDecorator('内容', {
+            initialValue: item['内容'],
+            rules: [
+              {
+                required: true,
+                message: '内容未填写'
+              }
+            ]
+          })(<Input type="textarea" rows={5} />)}
+        </FormItem>
+        <FormItem label='参与人员：' hasFeedback {...formItemLayout}>
+          {getFieldDecorator('参与人员', {
+            initialValue: item['参与人员'],
+            rules: [
+              {
+                required: true,
+                message: '参与人员未填写'
+              }
+            ]
+          })(<Input type="textarea" rows={5}  />)}
+        </FormItem>
       </Form>
     </Modal>
   )

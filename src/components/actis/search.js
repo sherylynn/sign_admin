@@ -20,7 +20,7 @@ const search = ({
     keyword,
     size: 'large',
     select: true,
-    selectOptions: [{ value: 'name', name: '姓名' }, { value: 'address', name: '地址' }],
+    selectOptions: [{ value: 'name', name: '名称' }, { value: 'address', name: '地点' }],
     selectProps: {
       defaultValue: field || 'name'
     },
