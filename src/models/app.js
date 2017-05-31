@@ -39,9 +39,12 @@ export default {
             }
           }})
       } else {
+        alert(data.message)
         yield put({
-          type: 'loginFail'
-        })
+          type: 'loginFail',
+          payload: {
+            msg:data.message
+        }})
       }
     },
     *queryUser ({
@@ -118,9 +121,10 @@ export default {
         login: false
       }
     },
-    loginFail (state) {
+    loginFail (state,action) {
       return {
         ...state,
+        ...action.payload,
         login: false,
         loginButtonLoading: false
       }

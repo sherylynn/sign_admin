@@ -41,6 +41,15 @@ export default function ({history, app}) {
             }, 'users')
           }
         }, {
+          path: 'actis',
+          name: 'actis',
+          getComponent (nextState, cb) {
+            require.ensure([], require => {
+              registerModel(app, require('./models/actis'))
+              cb(null, require('./routes/actis'))
+            }, 'actis')
+          }
+        }, {
           path: 'ui/ico',
           name: 'ui/ico',
           getComponent (nextState, cb) {
