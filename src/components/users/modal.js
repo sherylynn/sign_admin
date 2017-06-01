@@ -174,7 +174,33 @@ const modal = ({
             ]
           })(<Input />)}
         </FormItem>
-        
+        <FormItem label='参会：' hasFeedback {...formItemLayout}>
+          {getFieldDecorator('参会', {
+            initialValue: item['参会']
+            ? item['参会']
+            : '[]',
+            rules: [
+              {
+                required: true,
+                message: '不能为空'
+              }
+            ]
+          })(<Input />)}
+        </FormItem>
+        <FormItem label='积分：' hasFeedback {...formItemLayout}>
+          {getFieldDecorator('积分', {
+            initialValue: item['积分']
+            ? item['积分']
+            : 0,
+          })(<Input />)}
+        </FormItem>
+        <FormItem label='二维码号：' hasFeedback {...formItemLayout}>
+          {getFieldDecorator('二维码号', {
+            initialValue: item['二维码号']
+            ? item['二维码号']
+            : 0,
+          })(<Input />)}
+        </FormItem>
       </Form>
     </Modal>
   )

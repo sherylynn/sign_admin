@@ -6,7 +6,7 @@ import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsiv
 function Sales ({ data }) {
   return (
     <div className={styles.sales}>
-      <div className={styles.title}>Yearly Sales</div>
+      <div className={styles.title}>欢迎登录</div>
       <ResponsiveContainer minHeight={360}>
         <LineChart data={data}>
           <Legend verticalAlign='top'

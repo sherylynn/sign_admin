@@ -29,29 +29,35 @@ function list ({ loading, dataSource, pagination, onPageChange, onDeleteItem, on
       className: styles.avatar,
       render: (text) => <img width={24} src={text} />
     }, {
-      title: '名称',
-      dataIndex: '名称',
-      key: '名称'
+      title: '主题',
+      dataIndex: '主题',
+      key: '主题',
+      width:150
     }, {
       title: '时间',
       dataIndex: '时间',
-      key: '时间'
+      key: '时间',
+      width:150
     }, {
       title: '地点',
       dataIndex: '地点',
-      key: '地点'
+      key: '地点',
+      width:150
     }, {
       title: '积分',
       dataIndex: '积分',
-      key: '积分'
+      key: '积分',
+      width:150
     }, {
       title: '内容',
       dataIndex: '内容',
-      key: '内容'
+      key: '内容',
+      width:150
     }, {
       title: '参与人员',
       dataIndex: '参与人员',
-      key: '参与人员'
+      key: '参与人员',
+      width:200
     }, {
       title: '操作',
       key: 'operation',

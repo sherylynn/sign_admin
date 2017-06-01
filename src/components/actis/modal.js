@@ -60,13 +60,13 @@ const modal = ({
             ]
           })(<Input />)}
         </FormItem>
-        <FormItem label='名称：' hasFeedback {...formItemLayout}>
-          {getFieldDecorator('名称', {
-            initialValue: item['名称'],
+        <FormItem label='主题：' hasFeedback {...formItemLayout}>
+          {getFieldDecorator('主题', {
+            initialValue: item['主题'],
             rules: [
               {
                 required: true,
-                message: '名称未填写'
+                message: '主题未填写'
               }
             ]
           })(<Input />)}
@@ -95,7 +95,7 @@ const modal = ({
         </FormItem>
         <FormItem label='积分：' hasFeedback {...formItemLayout}>
           {getFieldDecorator('积分', {
-            initialValue: item['积分'],
+          initialValue: item['积分'],
             rules: [
               {
                 required: true,
@@ -119,7 +119,9 @@ const modal = ({
         </FormItem>
         <FormItem label='参与人员：' hasFeedback {...formItemLayout}>
           {getFieldDecorator('参与人员', {
-            initialValue: item['参与人员'],
+            initialValue: item['参与人员']
+            ? item['参与人员']
+            : '[]',
             rules: [
               {
                 required: true,

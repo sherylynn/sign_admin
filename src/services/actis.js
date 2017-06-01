@@ -2,7 +2,7 @@ import { request } from '../utils'
 import { config } from '../utils'
 const qs = require('qs')
 export async function query (params) {
-  //console.log(params)
+  console.log(params)
   //console.log(Object.entries(params))
   //console.log(qs.stringify(Object.entries(params)))
   //使用了一些麻烦的api 可行,思考的时候考虑过JSON.stringify 最后尝试 
@@ -42,6 +42,7 @@ export async function remove (params) {
 }
 
 export async function update (params) {
+  console.log(params)
   return request(config.host+config.actis, {
     method: 'put',
     mode: 'cors',
